@@ -2,7 +2,7 @@ FROM node:14.16.0
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json ./
 
 RUN npm install
 
@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["npm", "start"]
+CMD ["gatsby", "develop", "-H", "0.0.0.0"]
